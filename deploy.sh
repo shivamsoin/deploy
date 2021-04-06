@@ -15,11 +15,16 @@ sudo apt install apache2 -assume-yes
 systemctl start apache2
 systemctl enable apache2
 apt-get install build-essential --assume-yes
-git clone https://github.com/shivamsoin/test.git
-cd test
-pm2 start index.js
+echo "Enter Repo link :"
+read link
+git clone $link
+echo "Enter Repo name"
+read name 
+cd $name
+echo "Enter the js file name with .js extension"
+read file
+pm2 start $file
 pm2 status 
-pm2 startup ubuntu
 echo "Testing App on Local Host"
 curl http://localhost:8080
 
