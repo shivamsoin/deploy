@@ -25,7 +25,7 @@ echo "Enter the js file name with .js extension"
 read file
 pm2 start $file
 pm2 status 
-echo "Testing App on Local Host"
+echo "Testing App on localhost port 8080"
 curl http://localhost:8080
 
 
